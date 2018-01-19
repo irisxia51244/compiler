@@ -1,0 +1,14 @@
+from nltk import Tree
+
+ast = Tree.parse("(Program:0((Hello:0(Hello:0\
+)(There:1\
+))\
+)((There:1(Hello:10\
+)(There:11\
+))\
+)((What:2(Hello:20\
+)(There:21\
+))\
+)(Function:0\
+))\
+")
