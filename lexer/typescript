@@ -1,0 +1,66 @@
+Script started on Wed Apr 20 04:38:43 2016
+[cslab-02:~/compilers-s16-xias/compiler/lexer] xias% ./lexer test.c
+KEYWORD.int
+ID.a
+PUNCTUATION.;
+KEYWORD.char
+ID.b
+PUNCTUATION.;
+ID._a
+OPERATOR.=
+NUM.1
+PUNCTUATION.;
+ID.b
+OPERATOR.=
+NUM."m"
+KEYWORD.if
+PUNCTUATION.(
+ID.a
+OPERATOR.<=
+NUM.2
+PUNCTUATION.)
+PUNCTUATION.{
+ID.a
+OPERATOR.=
+ID.a
+OPERATOR.+
+NUM.1
+PUNCTUATION.;
+PUNCTUATION.}
+KEYWORD.else
+KEYWORD.if
+PUNCTUATION.(
+ID.b
+OPERATOR.==
+NUM."n"
+PUNCTUATION.{
+KEYWORD.return
+ID.b
+PUNCTUATION.;
+PUNCTUATION.}
+DONE
+[cslab-02:~/compilers-s16-xias/compiler/lexer] xias% ./lexer test_comment.c
+KEYWORD.char
+ID.m
+PUNCTUATION.;
+line 12: invalid symbol
+[cslab-02:~/compilers-s16-xias/compiler/lexer] xias% ,/l[K[K[K./lexer test_pn[Kunct.c
+KEYWORD.int
+ID.i
+OPERATOR.=
+NUM.0
+PUNCTUATION.;
+KEYWORD.if
+PUNCTUATION.(
+ID.i
+OPERATOR.=
+NUM.1
+line 10: invalid symbol
+[cslab-02:~/compilers-s16-xias/compiler/lexer] xias% ./lexer test_quote.c
+KEYWORD.char
+ID.a
+PUNCTUATION.;
+ID.a
+OPERATOR.=
+line 11: invalid symbol
+[cslab-02:~/compilers-s16-xias/compiler/lexer] xias% 

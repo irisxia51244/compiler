@@ -1,0 +1,29 @@
+* first, run: make depend 
+  ignore the warnings about not being able to find stddef.h etc.
+
+* to compile: make 
+
+* to run the lexer:
+        ./lexer source_code_file
+  example:
+        ./lexer ../test_suite/test_arrays.c-- 
+
+* if you add more .h files, put them in the includes subdirectory
+* if you add more .c files, add them to the SRCS def in the Makefile 
+
+* Changes from PART 1-3 : 
+  the new token types are: keyword, identifier, num, operators and punctuation
+  Considering the condition of NUM in a different way. In this stage, all the 
+  letters and digits between two paired double quotes are recognized as a single NUM.
+  Ignore the case when they are between two single quotes, since C does not allow to 
+  check if a variable is ‘’’.
+* first, run : make depend
+* to compile: make
+* to run the lexer:
+         ./lexer source_code_file
+  example:
+         ./lexer ../test.c
+         ./lexer ../test_comment.c
+         ./lexer ../test_quote.c
+         ./lexer ../test_punct.c
+* small sample of output : ../typescript
